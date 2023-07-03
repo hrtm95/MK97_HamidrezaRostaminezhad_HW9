@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MK97_HamidrezaRostaminezhad_HW9", "MK97_HamidrezaRostaminezhad_HW9\MK97_HamidrezaRostaminezhad_HW9.csproj", "{1D23370C-0EAB-412A-8E4F-E89AF70CF49A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{F1BDE5DA-B3A7-46B8-BF79-836D6DB5F878}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1D23370C-0EAB-412A-8E4F-E89AF70CF49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D23370C-0EAB-412A-8E4F-E89AF70CF49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D23370C-0EAB-412A-8E4F-E89AF70CF49A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1BDE5DA-B3A7-46B8-BF79-836D6DB5F878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1BDE5DA-B3A7-46B8-BF79-836D6DB5F878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1BDE5DA-B3A7-46B8-BF79-836D6DB5F878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1BDE5DA-B3A7-46B8-BF79-836D6DB5F878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
