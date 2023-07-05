@@ -1,0 +1,20 @@
+﻿@page
+@model MK97_HamidrezaRostaminezhad_HW9.Pages.pages.DetailsModel
+@{
+}
+
+<div class=" card m-3" style="min-width:18rem ; max-width: 30%;">
+    <div class="card-header">
+        <h3>@Model.product.ProductName</h3>
+    </div>
+
+    <img class="cart-img-top img-thumbnail" src="@Model.product.PhotoUrl">
+    <div class="card-body">
+
+        <h6>@Model.product.Description</h6>
+        <h6>barcode is : @Model.product.Barcode</h6>
+        <h6>ID is : @Model.product.Id</h6>
+    </div>
+    <div class="card-footer text-center">
+    </div>
+</div>
