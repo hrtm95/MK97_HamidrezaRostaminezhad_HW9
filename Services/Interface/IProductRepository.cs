@@ -11,6 +11,7 @@ namespace Services.Interface
     {
         IEnumerable<Product> GetAllProduct();
         Product GetProductById(int id);
-
+        bool Edit(Product product);
+        bool Delete(int id);
     }
 }
