@@ -1,7 +1,11 @@
+using Services.Interface;
+using Services.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<IProductRepository , ProductRepository>();
 
 var app = builder.Build();
 

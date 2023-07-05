@@ -2,3 +2,33 @@
 @model MK97_HamidrezaRostaminezhad_HW9.Pages.pages.IndexModel
 @{
 }
+<div class="card-deck row">
+    @foreach (var item in Model.products)
+    {
+        <div class=" card m-3 col" style="min-width:18rem ; max-width: 30%;">
+            <div class="card-header">
+                <h3>@item.ProductName</h3>
+            </div>
+
+            <img class="cart-img-top img-thumbnail" src="@item.PhotoUrl">
+
+
+
+
+            <div class="card-body">
+
+                <h6>@item.Description</h6>
+            </div>
+            <div class="card-footer text-center">
+                <form method="post">
+                    <input type="hidden" asp-for="@Model.id" value="@item.Id">
+                    <button asp-page="/pages/Index" asp-route-Id="@item.Id" class="btn btn-primary m-1" type="submit">delete</button>
+                    <a asp-page="/pages/Edit" asp-route-Id="@item.Id" class="btn btn-primary m-1">edit</a>
+                    <a asp-page="/pages/Details" asp-route-Id="@item.Id" class="btn btn-primary m-1">Details</a>
+                </form>
+
+            </div>
+        </div>
+
+    }
+</div>
