@@ -1,0 +1,12 @@
+﻿@page
+@model MK97_HamidrezaRostaminezhad_HW9.Pages.pages.EditModel
+@{
+}
+<form method="post" class="mt-3">
+
+    <input type="hidden" asp-for="@Model.product.Id" />
+    <input type="text" asp-for="@Model.product.ProductName" />
+    <input type="text" asp-for="@Model.product.Description" />
+    <button type="submit">update</button>
+
+</form>
