@@ -18,9 +18,14 @@ namespace MK97_HamidrezaRostaminezhad_HW9.Pages.pages
         public Product product { get; set; }
 
 
-        public void OnGet(int id)
+        public IActionResult OnGet(int id)
         {
             product = _productRepository.GetProductById(id);
+            if (product == null)
+            { 
+                return RedirectToPage("404");
+            }
+            return Page();
         }
     }
 }

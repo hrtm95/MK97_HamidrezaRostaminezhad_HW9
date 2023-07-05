@@ -17,10 +17,11 @@
     <div class="row">
         @foreach (var item in Model.products)
         {
+            var PhotoImg = "/css/" + (@item.PhotoUrl ?? "noimage.jpg");
             <div class=" col-12  col-md-3 mb-3">
                     <div class="card h-100">
                         <a asp-page="/pages/Details" asp-route-Id="@item.Id">
-                            <img src="@item.PhotoUrl" class="card-img-top" alt="...">
+                        <img src="@PhotoImg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -44,7 +45,7 @@
 
 
                     @*                    //بعدا انتقال میدیم به دیتیل*@
-@*                    <div class="card-body">
+                    <div class="card-body">
 
                 <h6>@item.Description</h6>
                 </div>
@@ -56,7 +57,7 @@
                 <a asp-page="/pages/Details" asp-route-Id="@item.Id" class="btn btn-primary m-1">Details</a>
                 </form>
 
-                </div>*@
+                </div>
 
                 </div>
         }
