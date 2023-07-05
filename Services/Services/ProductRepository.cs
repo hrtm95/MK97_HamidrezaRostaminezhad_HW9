@@ -37,5 +37,28 @@ namespace Services.Services
             else
                 return null;
         }
+        public bool Edit(Product product)
+        {
+            var item = _products.FirstOrDefault(x => x.Id == product.Id);
+            if (item != null)
+            {
+                item.ProductName = product.ProductName;
+                item.Description = product.Description;
+                return true;
+            }
+            return false;
+        }
+        public bool Delete(int id)
+        {
+            var item = _products.FirstOrDefault(x => x.Id == id);
+            if (item != null)
+            {
+                _products.Remove(item);
+                return true;
+            }
+            return false;
+
+        }
+
     }
 }
