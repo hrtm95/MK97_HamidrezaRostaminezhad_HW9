@@ -8,6 +8,9 @@ namespace MK97_HamidrezaRostaminezhad_HW9.Pages.pages
     public class DetailsModel : PageModel
     {
         private IProductRepository _productRepository;
+        public IEnumerable<Product> products;
+        [BindProperty]
+        public int id { get; set; }
 
         public DetailsModel(IProductRepository productRepository)
         {
@@ -26,6 +29,11 @@ namespace MK97_HamidrezaRostaminezhad_HW9.Pages.pages
                 return RedirectToPage("404");
             }
             return Page();
+        }
+        public IActionResult OnPost()
+        {
+            _productRepository.Delete(id);
+            return RedirectToPage("Index", products);
         }
     }
 }

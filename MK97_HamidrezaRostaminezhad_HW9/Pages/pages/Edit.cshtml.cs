@@ -34,7 +34,7 @@ namespace MK97_HamidrezaRostaminezhad_HW9.Pages.pages
                 if (product.PhotoUrl != null)
                 {
                     string FileFolder =
-                    Path.Combine(_webHostEnvironment.WebRootPath, "css", product.PhotoUrl);
+                    Path.Combine(_webHostEnvironment.WebRootPath, "img", product.PhotoUrl);
                     System.IO.File.Delete(FileFolder);
 
                 }

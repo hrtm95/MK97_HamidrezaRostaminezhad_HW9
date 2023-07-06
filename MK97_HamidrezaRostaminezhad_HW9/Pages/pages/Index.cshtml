@@ -2,26 +2,26 @@
 @model MK97_HamidrezaRostaminezhad_HW9.Pages.pages.IndexModel
 @{
 }
-<section class="bg-light">
-
-    <div class="row text-center py-3">
-        <div class="col-lg-6 m-auto">
-            <h1 class="h1">بیسکویت های جدید </h1>
-            <p>
-                بیسکویت کده با 65 سال سابقه فروش آنلاین در خدمت شماست
-                میتوانید هر بیسکوییتی که میخواهید  خریداری کنید
-            </p>
+<section class="bg-light" style="margin-bottom:5rem">
+    <div class="container py-5">
+        <div class="row text-center py-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">بیسکویت های جدید </h1>
+                <p>
+                    بیسکویت کده با 65 سال سابقه فروش آنلاین در خدمت شماست
+                    میتوانید هر بیسکوییتی که میخواهید  خریداری کنید
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="row">
-        @foreach (var item in Model.products)
-        {
-            var PhotoImg = "/css/" + (@item.PhotoUrl ?? "noimage.jpg");
-            <div class=" col-12  col-md-3 mb-3">
+        <div class="row">
+            @foreach (var item in Model.products)
+            {
+                var PhotoImg = "/img/" + (@item.PhotoUrl ?? "noimage.jpg");
+                <div class=" col-12  col-md-4 mb-4">
                     <div class="card h-100">
                         <a asp-page="/pages/Details" asp-route-Id="@item.Id">
-                        <img src="@PhotoImg" class="card-img-top" alt="...">
+                            <img src="@PhotoImg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -41,25 +41,9 @@
                             <p class="text-muted">Reviews (24)</p>
                         </div>
                     </div>
-
-
-
-                    @*                    //بعدا انتقال میدیم به دیتیل*@
-                    <div class="card-body">
-
-                <h6>@item.Description</h6>
                 </div>
-                <div class="card-footer text-center">
-                <form method="post">
-                <input type="hidden" asp-for="@Model.id" value="@item.Id">
-                <button asp-page="/pages/Index" asp-route-Id="@item.Id" class="btn btn-primary m-1" type="submit">delete</button>
-                <a asp-page="/pages/Edit" asp-route-Id="@item.Id" class="btn btn-primary m-1">edit</a>
-                <a asp-page="/pages/Details" asp-route-Id="@item.Id" class="btn btn-primary m-1">Details</a>
-                </form>
-
-                </div>
-
-                </div>
-        }
+            }
+        </div>
     </div>
+
 </section>
