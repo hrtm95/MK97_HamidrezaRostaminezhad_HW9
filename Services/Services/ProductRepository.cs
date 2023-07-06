@@ -16,13 +16,13 @@ namespace Services.Services
             _products = new List<Product>()
             {
                 new Product { Id = 1,ProductName = "Biscolata Pia",Barcode= "",
-                    PhotoUrl = "https://shocoshop.com/wp-content/uploads/2020/11/Biscolata-Pia-Cake-with-Orange-100-G.jpg", Description = "بسکوییت شکلاتی پرتقالی پیا" },
-                new Product { Id = 1,ProductName = "Biscolata Mood",Barcode= "",
-                    PhotoUrl = "https://abnabatshop.com/wp-content/uploads/2020/08/watermark-5.jpg", Description = "بسکوییت شکلاتی مود برند بیسکولاتا" },
-                new Product { Id = 1,ProductName = "Nutri",Barcode= "",
-                    PhotoUrl = "https://www.ishopindian.com/images/D/5grain_nc.jpg", Description = "بیسکوییت گندمی برند " },
-                new Product { Id = 1,ProductName = "Oreo",Barcode= "",
-                    PhotoUrl = "https://ecom-su-static-prod.wtrecom.com/images/products/4/LN_448126_BP_4.jpg", Description = "بیسکوییت کرم دار اورو" },
+                    PhotoUrl = "1.jpg", Description = "بسکوییت شکلاتی پرتقالی پیا" },
+                new Product { Id = 2,ProductName = "Biscolata Mood",Barcode= "",
+                    PhotoUrl = "2.jpg", Description = "بسکوییت شکلاتی مود برند بیسکولاتا" },
+                new Product { Id = 3,ProductName = "Nutri",Barcode= "",
+                    PhotoUrl = "3.jpg", Description = "بیسکوییت گندمی برند " },
+                new Product { Id = 4,ProductName = "Oreo",Barcode= "",
+                    PhotoUrl = "4.jpg", Description = "بیسکوییت کرم دار اورو" },
 
             };
         }
@@ -48,6 +48,7 @@ namespace Services.Services
             {
                 item.ProductName = product.ProductName;
                 item.Description = product.Description;
+                item.PhotoUrl = product.PhotoUrl;
                 return true;
             }
             return false;
