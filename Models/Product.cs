@@ -6,17 +6,17 @@ namespace Models
     {
 
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Enter name")]
         public string ProductName { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Enter Description")]
         public string Description { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Enter Price")]
         public double Price { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Enter PhotoUrl")]
         public string PhotoUrl { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Enter PhotoUrl")]
         public string Barcode { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Enter Barcode")]
         public string ShortDescription { get; set; }
     }
 }

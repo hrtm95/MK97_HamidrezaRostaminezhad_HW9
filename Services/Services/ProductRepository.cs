@@ -15,14 +15,23 @@ namespace Services.Services
         {
             _products = new List<Product>()
             {
-                new Product { Id = 1,ProductName = "Biscolata Pia",Barcode= "",
-                    PhotoUrl = "1.jpg", Description = "بسکوییت شکلاتی پرتقالی پیا" },
-                new Product { Id = 2,ProductName = "Biscolata Mood",Barcode= "",
-                    PhotoUrl = "2.jpg", Description = "بسکوییت شکلاتی مود برند بیسکولاتا" },
-                new Product { Id = 3,ProductName = "Nutri",Barcode= "",
-                    PhotoUrl = "3.jpg", Description = "بیسکوییت گندمی برند " },
-                new Product { Id = 4,ProductName = "Oreo",Barcode= "",
-                    PhotoUrl = "4.jpg", Description = "بیسکوییت کرم دار اورو" },
+                new Product { Id = 1,ProductName = "flashlight",Barcode= "123456",Price = 10000,
+                    PhotoUrl = "1.jpg",
+                    Description = "A flashlight is a light that's small enough to hold in your hand and carry around. When you're camping, it's useful to bring a flashlight so you can find your sleeping bag in the dark tent.\r\n\r\nMost flashlights are powered with batteries, although some of them can be charged in the sun and use the stored solar energy for power. All flashlights are portable, basically small lamps that fit easily in your hand, your pocket, or your backpack. In Britain, a flashlight is often called a torch. The earliest versions of flashlights were invented around 1899.",
+                    ShortDescription = "A flashlight is a light that's small enough to hold in your hand and carry around. When you're camping, it's useful to bring a flashlight so you can find your sleeping bag in the dark tent." },
+                new Product { Id = 2,ProductName = "Smart watch",Barcode= "123456789",
+                    PhotoUrl = "2.jpg", Description = "A flashlight is a light that's small enough to hold in your hand and carry around. When you're camping, it's useful to bring a flashlight so you can find your sleeping bag in the dark tent.\r\n\r\nMost flashlights are powered with batteries, although some of them can be charged in the sun and use the stored solar energy for power. All flashlights are portable, basically small lamps that fit easily in your hand, your pocket, or your backpack. In Britain, a flashlight is often called a torch. The earliest versions of flashlights were invented around 1899.",
+                    ShortDescription = "A flashlight is a light that's small enough to hold in your hand and carry around. When you're camping, it's useful to bring a flashlight so you can find your sleeping bag in the dark tent." 
+                    , Price = 10000},
+                new Product { Id = 3,ProductName = "Camera",Barcode= "12345678",
+                    PhotoUrl = "3.jpg",Description = "A flashlight is a light that's small enough to hold in your hand and carry around. When you're camping, it's useful to bring a flashlight so you can find your sleeping bag in the dark tent.\r\n\r\nMost flashlights are powered with batteries, although some of them can be charged in the sun and use the stored solar energy for power. All flashlights are portable, basically small lamps that fit easily in your hand, your pocket, or your backpack. In Britain, a flashlight is often called a torch. The earliest versions of flashlights were invented around 1899.",
+                    ShortDescription = "A flashlight is a light that's small enough to hold in your hand and carry around. When you're camping, it's useful to bring a flashlight so you can find your sleeping bag in the dark tent." 
+                    , Price =20000},
+                new Product { Id = 4,ProductName = "Oreo",Barcode= "123456",
+                    PhotoUrl = "4.jpg",
+                    Description = "A flashlight is a light that's small enough to hold in your hand and carry around. When you're camping, it's useful to bring a flashlight so you can find your sleeping bag in the dark tent.\r\n\r\nMost flashlights are powered with batteries, although some of them can be charged in the sun and use the stored solar energy for power. All flashlights are portable, basically small lamps that fit easily in your hand, your pocket, or your backpack. In Britain, a flashlight is often called a torch. The earliest versions of flashlights were invented around 1899.",
+                    ShortDescription = "A flashlight is a light that's small enough to hold in your hand and carry around. When you're camping, it's useful to bring a flashlight so you can find your sleeping bag in the dark tent."
+                    , Price = 50000 },
 
             };
         }
@@ -48,6 +57,9 @@ namespace Services.Services
             {
                 item.ProductName = product.ProductName;
                 item.Description = product.Description;
+                item.Price = product.Price;
+                item.ShortDescription = product.ShortDescription;
+                item.Barcode = product.Barcode;
                 item.PhotoUrl = product.PhotoUrl;
                 return true;
             }

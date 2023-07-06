@@ -29,19 +29,23 @@ namespace MK97_HamidrezaRostaminezhad_HW9.Pages.pages
         }
         public IActionResult OnPost(Product product)
         {
-            if (Photo != null)
+            if(ModelState.IsValid)
             {
-                if (product.PhotoUrl != null)
+                if (Photo != null)
                 {
-                    string FileFolder =
-                    Path.Combine(_webHostEnvironment.WebRootPath, "img", product.PhotoUrl);
-                    System.IO.File.Delete(FileFolder);
+                    if (product.PhotoUrl != null)
+                    {
+                        string FileFolder =
+                        Path.Combine(_webHostEnvironment.WebRootPath, "img", product.PhotoUrl);
+                        System.IO.File.Delete(FileFolder);
 
+                    }
+                    product.PhotoUrl = ProcessUploadFile();
                 }
-                product.PhotoUrl = ProcessUploadFile();
+                _productRepository.Edit(product);
+                return RedirectToPage("Index");
             }
-            _productRepository.Edit(product);
-            return RedirectToPage("Index");
+            return Page();
         }
 
 
